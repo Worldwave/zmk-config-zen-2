@@ -65,7 +65,7 @@
                         bindings = <
    &kp GRAVE     &kp N1              &kp N2       &kp N3       &kp N4       &kp N5            &kp N6       &kp N7   &kp N8   &kp N9    &kp N0        &kp BSPC
    &mt LSHFT TAB &bt BT_SEL 0        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp INS      &kp HOME &kp UP   &kp END   &kp SEMI      &kp DEL
-   &kp LCTRL     &holdbtclr BT_CLR   &kp PSCRN    &kp K_PREV   &kp K_PP     &kp K_NEXT        &kp LC(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LC(RIGHT) &kp RSHFT
+   &kp LCTRL     &holdbtclr BT_CLR   &kp PSCRN    &kp C_PREV   &kp C_PP     &kp C_NEXT        &kp LC(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LC(RIGHT) &kp RSHFT
                           	                      &kp LGUI     &trans       &kp SPACE         &kp SPACE  &trans   &kp LALT
                         >;
                 };
