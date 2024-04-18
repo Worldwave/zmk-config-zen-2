@@ -88,12 +88,12 @@
                         label = "NUMPAD";
 // -----------------------------------------------------------------------------------------
 // |ALTESC|VOLDN|MUTE |VOLUP|SNIPS| LOCK|   |  1  |  2  |  3  |  +  |  *  | BKSP |
-// |SHFTAB|PGEDN|HOME | UP  | END |PGEUP|   |  4  |  5  |  6  |  -  |  =  | DEL  |
+// |SHFTAB|PGEUP|HOME | UP  | END |PGEDN|   |  4  |  5  |  6  |  -  |  =  | DEL  |
 // |LCTRL | DLFT| LFT | DWN | RGT |DRGT |   |  7  |  8  |  9  |  /  |  ;  |RSHFT |
 //                    |LGUI |     |     |   | SPC |  0  |ALTDT|
                         bindings = <
    &mt LALT ESC    &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &kp LG(LS(S))  &kp LG(L)                 &kp N1    &kp N2  &kp N3  &kp PLUS  &kp STAR   &kp BSPC
-   &mt LSHFT TAB   &kp PG_DN    &kp HOME   &kp UP       &kp END        &kp PG_UP                 &kp N4    &kp N5  &kp N6  &kp MINUS &kp EQUAL  &kp DEL
+   &mt LSHFT TAB   &kp PG_UP    &kp HOME   &kp UP       &kp END        &kp PG_DN                 &kp N4    &kp N5  &kp N6  &kp MINUS &kp EQUAL  &kp DEL
    &kp LCTRL       &kp LC(LEFT) &kp LEFT   &kp DOWN     &kp RIGHT      &kp LC(RIGHT)             &kp N7    &kp N8  &kp N9  &kp FSLH  &kp SEMI   &kp RSHFT
                                            &kp LGUI     &none          &none                     &kp SPACE &kp N0  &ht_bl RALT DOT
                         >;
