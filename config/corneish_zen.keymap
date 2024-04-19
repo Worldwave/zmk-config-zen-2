@@ -77,12 +77,12 @@
 // -----------------------------------------------------------------------------------------
 // |ALTESC| F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | BKSP |
 // |SHFTAB| F11 | F12 |     |     |GAME |   |  -  |  =  |  [  |  ]  | "|" |  DEL |
-// |LCTRL | GUI |     |     |     |     |   |  _  |  +  |  {  |  }  |  \  | SHFT |
+// |LCTRL |     |     |     |     |     |   |  _  |  +  |  {  |  }  |  \  | SHFT |
 //                    |LGUI |     | SPC |   | SPC |     | LALT |
                         bindings = <
    &mt LALT ESC  &kp F1   &kp F2     &kp F3   &kp F4  &kp F5       &kp F6    &kp F7    &kp F8     &kp F9   &kp F10  &kp BKSP
    &mt LSHFT TAB &kp F11  &kp F12    &none    &none   &tog 4       &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT &kp PIPE &kp DEL
-   &kp LCTRL     &kp LGUI &trans     &none    &none   &none        &kp UNDER &kp PLUS  &kp LBRC   &kp RBRC &kp BSLH &kp RSHFT
+   &kp LCTRL     &none    &none      &none    &none   &none        &kp UNDER &kp PLUS  &kp LBRC   &kp RBRC &kp BSLH &kp RSHFT
                     	               &kp LGUI &trans  &kp SPACE    &kp SPACE &trans     &kp LALT
                         >;
                 };
