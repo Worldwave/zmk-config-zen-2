@@ -32,17 +32,19 @@
     };
 };
 
-#define DEFAULT 0
+#define BASE    0
 #define LOWER   1
 #define RAISE   2
 #define NUMPAD  3
+#define GAMING  4
+#define GAMLOW  5
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "WRLDWV";
+                        label = "BASE";
 // -----------------------------------------------------------------------------------------
 // |ALTESC|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // |SHFTAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  '  | ENT  |
@@ -56,7 +58,7 @@
                         >;
                 };
                 lower_layer {
-                        label = "NUMBER";
+                        label = "LOWER";
 // -----------------------------------------------------------------------------------------
 // |   `  |  1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |SHFTAB| BT1  | BT2 | BT3 | BT4 | BT5 |   |INSRT|HOME | UP  | END |  ;  |  DEL |
@@ -66,22 +68,22 @@
    &kp GRAVE     &kp N1              &kp N2       &kp N3       &kp N4       &kp N5            &kp N6       &kp N7   &kp N8   &kp N9    &kp N0        &kp BSPC
    &mt LSHFT TAB &bt BT_SEL 0        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp INS      &kp HOME &kp UP   &kp END   &kp SEMI      &kp DEL
    &kp LCTRL     &holdbtclr BT_CLR   &kp PSCRN    &kp C_PREV   &kp C_PP     &kp C_NEXT        &kp LC(LEFT) &kp LEFT &kp DOWN &kp RIGHT &kp LC(RIGHT) &kp RSHFT
-                          	                      &kp LGUI     &trans       &kp SPACE         &kp SPACE  &trans   &kp LALT
+                          	                      &kp LGUI     &trans       &kp SPACE         &kp SPACE    &trans   &kp LALT
                         >;
                 };
 
                 raise_layer {
-                        label = "SYMBOL";
+                        label = "RAISE";
 // -----------------------------------------------------------------------------------------
 // |ALTESC| F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | BKSP |
-// |SHFTAB| F11 | F12 |     |     |     |   |  -  |  =  |  [  |  ]  | "|" |  DEL |
+// |SHFTAB| F11 | F12 |     |     |GAME |   |  -  |  =  |  [  |  ]  | "|" |  DEL |
 // |LCTRL | GUI |     |     |     |     |   |  _  |  +  |  {  |  }  |  \  | SHFT |
 //                    |LGUI |     | SPC |   | SPC |     | LALT |
                         bindings = <
    &mt LALT ESC  &kp F1   &kp F2     &kp F3   &kp F4  &kp F5       &kp F6    &kp F7    &kp F8     &kp F9   &kp F10  &kp BKSP
-   &mt LSHFT TAB &kp F11  &kp F12    &trans   &trans  &trans       &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT &kp PIPE &kp DEL
-   &kp LCTRL     &kp LGUI &trans     &trans   &trans  &trans       &kp UNDER &kp PLUS  &kp LBRC   &kp RBRC &kp BSLH &kp RSHFT
-                    	               &kp LGUI &trans  &kp SPACE    &kp SPACE &trans    &kp LALT
+   &mt LSHFT TAB &kp F11  &kp F12    &none    &none   &tog 4       &kp MINUS &kp EQUAL &kp LBKT   &kp RBKT &kp PIPE &kp DEL
+   &kp LCTRL     &kp LGUI &trans     &none    &none   &none        &kp UNDER &kp PLUS  &kp LBRC   &kp RBRC &kp BSLH &kp RSHFT
+                    	               &kp LGUI &trans  &kp SPACE    &kp SPACE &trans     &kp LALT
                         >;
                 };
                 numpad_layer {
@@ -98,5 +100,34 @@
                                            &kp LGUI     &none          &none                     &kp SPACE &kp N0  &ht_bl RALT DOT
                         >;
                 };
+                gaming_layer {
+                        label = "GAMING";
+// -----------------------------------------------------------------------------------------
+// | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  '  | ENT  |
+// | LCTRL|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+//                    | LALT| GSUB| SPC |   | SPC |      | LALT |
+                        bindings = <
+   &kp TAB    &kp Q &kp W &kp E    &kp R &kp T            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LSHFT  &kp A &kp S &kp D    &kp F &kp G            &kp H &kp J  &kp K     &kp L   &kp SQT  &kp RET
+   &kp LCTRL  &kp Z &kp X &kp C    &kp V &kp B            &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                          &kp LALT &mo 5 &kp SPACE        &kp SPACE    &none     &kp LALT
+                        >;
+                };
+                gaming_sublayer {
+                        label = "GAMLOW";
+// -----------------------------------------------------------------------------------------
+// | ESC  |  `  |  1  |  2  |  3  |  4  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+// | SHFT |  5  |  6  |  7  |  8  |GAME |   |  H  |  J   |  K  |  L  |  '  | ENT  |
+// | LCTRL|  F1 |  F2 |  F3 |  F4 |  F5 |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
+//                    | LGUI|     | SPC |   | SPC | RSE  | LALT |
+                        bindings = <
+   &kp ESC    &kp GRAVE  &kp 1  &kp 2    &kp 3  &kp 4            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LSHFT  &kp 5      &kp 6  &kp 7    &kp 8  &tog 4           &kp H &kp J  &kp K     &kp L   &kp SQT  &kp RET
+   &kp LCTRL  &kp F1     &kp F2 &kp F3   &kp F4 &kp F5           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                          &kp LGUI   &trans &kp SPACE            &kp SPACE    &none     &kp LALT
+                        >;
+                };
+
         };
 };
