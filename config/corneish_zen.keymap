@@ -122,10 +122,10 @@
 // | LCTRL|  F1 |  F2 |  F3 |  F4 |  F5 |   |  N  |  M   |  ,  |  .  |  /  | SHFT |
 //                    | LGUI|     | SPC |   | SPC | RSE  | LALT |
                         bindings = <
-   &kp ESC    &kp GRAVE  &kp 1  &kp 2    &kp 3  &kp 4            &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT  &kp 5      &kp 6  &kp 7    &kp 8  &tog 4           &kp H &kp J  &kp K     &kp L   &kp SQT  &kp RET
-   &kp LCTRL  &kp F1     &kp F2 &kp F3   &kp F4 &kp F5           &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                          &kp LGUI   &trans &kp SPACE            &kp SPACE    &none     &kp LALT
+   &kp ESC    &kp GRAVE  &kp N1     &kp N2    &kp N3   &kp N4        &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LSHFT  &kp N5     &kp N6     &kp N7    &kp N8   &tog 4        &kp H &kp J  &kp K     &kp L   &kp SQT  &kp RET
+   &kp LCTRL  &kp F1     &kp F2     &kp F3    &kp F4   &kp F5        &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                                    &kp LGUI  &trans   &kp SPACE     &kp SPACE    &none     &kp LALT
                         >;
                 };
 
