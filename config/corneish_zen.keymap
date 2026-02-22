@@ -3,9 +3,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-  chosen {
-    zmk,matrix_transform = &default_transform;
-  };
+    chosen {
+        zmk,physical-layout = &foostan_corne_6col_layout;
+        // zmk,physical-layout = &foostan_corne_5col_layout;
+    };
 };
 
 / {
@@ -44,7 +45,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        label = "BASE";
+                        display-name = "BASE";
 // -----------------------------------------------------------------------------------------
 // |ALTESC|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // |SHFTAB|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  '  | ENT  |
@@ -58,7 +59,7 @@
                         >;
                 };
                 lower_layer {
-                        label = "LOWER";
+                        display-name = "LOWER";
 // -----------------------------------------------------------------------------------------
 // |   `  |  1   |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // |SHFTAB| BT1  | BT2 | BT3 | BT4 | BT5 |   |INSRT|HOME | UP  | END |  ;  |  DEL |
@@ -73,7 +74,7 @@
                 };
 
                 raise_layer {
-                        label = "RAISE";
+                        display-name = "RAISE";
 // -----------------------------------------------------------------------------------------
 // |ALTESC| F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 | BKSP |
 // |SHFTAB| F11 | F12 |     |     |GAME |   |  -  |  =  |  [  |  ]  | "|" |  DEL |
@@ -87,7 +88,7 @@
                         >;
                 };
                 numpad_layer {
-                        label = "NUMPAD";
+                        display-name = "NUMPAD";
 // -----------------------------------------------------------------------------------------
 // |ALTESC|CMENU|VOLDN|MUTE |VOLUP| LOCK|   |  1  |  2  |  3  |  +  |  *  | BKSP |
 // |SHFTAB|PGEUP|HOME | UP  | END |PGEDN|   |  4  |  5  |  6  |  -  |  =  | DEL  |
@@ -101,7 +102,7 @@
                         >;
                 };
                 gaming_layer {
-                        label = "GAMING";
+                        display-name = "GAMING";
 // -----------------------------------------------------------------------------------------
 // | TAB  |  Q  |  W  |  E  |  R   |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | SHFT |  A  |  S  |  D  |  F   |  G  |   |  H  |  J   |  K  |  L  |  '  | ENT  |
@@ -115,7 +116,7 @@
                         >;
                 };
                 gaming_sublayer {
-                        label = "GAMLOW";
+                        display-name = "GAMLOW";
 // -----------------------------------------------------------------------------------------
 // | ESC  |  `  |  1  |  2  |  3  |  4  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | SHFT |  5  |  6  |  7  |  8  |GAME |   |  H  |  J   |  K  |  L  |  '  | ENT  |
